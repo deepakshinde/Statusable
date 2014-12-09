@@ -1,8 +1,6 @@
 Statusable
 ==========
-
-gem 'enumerize'
-
+Dependancy on  gem 'enumerize' for Mongo-maper
 e.g
 
     class User
