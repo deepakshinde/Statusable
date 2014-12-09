@@ -3,13 +3,14 @@ Statusable
 
 gem 'enumerize'
 
+
 e.g 
-class User
-  include MongoMapper::Document
-  include MongoMapper::Statusable
-  
-  statusable!(["pending" , "pause"], "pending")
-end
+    class User
+      include MongoMapper::Document
+      include MongoMapper::Statusable
+      
+      statusable!(["pending" , "pause"], "pending")
+    end
 
 
 user = User.new
