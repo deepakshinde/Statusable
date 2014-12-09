@@ -1,11 +1,24 @@
 Statusable
 ==========
-require gem 'enumerize'
-model add 
 
-include MongoMapper::Statusable
+gem 'enumerize'
+
+e.g 
+class User
+  include MongoMapper::Document
+  include MongoMapper::Statusable
+  
+  statusable!(["pending" , "pause"], "pending")
+end
 
 
-statusable!(Array/Hash, default_option)
+user = User.new
 
-statusable base object that can be included in any model class to add a status field for mongo mapper
+user.pending?   # => true
+user.pause? # => false
+
+user.status = :pause
+
+user.pending?   # => false
+user.pause? # => true
+
