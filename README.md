@@ -3,8 +3,8 @@ Statusable
 
 gem 'enumerize'
 
+e.g
 
-e.g 
     class User
       include MongoMapper::Document
       include MongoMapper::Statusable
